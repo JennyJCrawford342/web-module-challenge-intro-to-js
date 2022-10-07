@@ -321,7 +321,7 @@ HINT - try looking up the .includes() method
 
 
 function vowelCounter(string) {
-  console.log(vowelCounter.includes());
+  return string.includes('a, A, e, E, i, I, o, O, u, U')
 }
 console.log(vowelCounter('I love coding'));
 
