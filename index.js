@@ -161,19 +161,19 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 
 function hungryDog(age, weight){
   if(age >= 1 && weight <= 5){
-  console.log(weight * 0.05);
+  return weight*0.05;
 }else if(age >= 1 && weight >= 6 && weight <= 10){
-  console.log(weight * 0.04);
+  return weight*0.04;
 }else if(age >= 1 && weight >= 11 && weight <= 15){
-  console.log(weight * 0.03);
+  return weight*0.03;
 }else if(age >= 1 && weight > 15){
-  console.log(weight * 0.02);
+  return weight*0.02;
 }else if(age <= 0.33){
-  console.log(weight * 0.10);
+  return weight*0.10;
 }else if(age >= 0.33 && age <= 0.58){
-  console.log(weight * 0.05);
+  return weight*0.05;
 }else if(age >= 0.58 && age < 1){
-  console.log(weight * 0.04);
+  return weight*0.04;
   }
 }
 console.log('Task 3:', hungryDog(1, 15));
@@ -271,8 +271,8 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
   for(let i = number; i > 0; i--){
-    console.log(i, 'bottles of soda on the wall', i ,'bottles of soda, take one down pass it around', i -1, 'bottles of soda on the wall');
-  };
+    return `${i} bottles of soda on the wall ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall.`
+    };
 }
 console.log('Task 6', annoyingSong(8));
 
@@ -293,15 +293,15 @@ Using the grade function below do the following:
 
 function grade(score){
 if(score >= 90 && score <= 100){
-  console.log('you got an A');
+  return `you got an A`
 }else if(score >= 80 && score <= 89){
-  console.log('you got a B');
+  return `you got a B`;
 }else if(score >= 70 && score <= 79){
-  console.log('you got a C');
+  return `you got a C`;
 }else if(score >= 60 && score <= 69){
-  console.log('you got a D');
+  return `you got a D`;
 }else if(score < 60){
-  console.log('you got an F')
+  return `you got an F`;
 }
 }
 console.log('Task 7', grade(87));
