@@ -320,12 +320,17 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(string) {
-  return string.includes('a, A, e, E, i, I, o, O, u, U')
+function vowelCounter(str) {
+  var vowelsCount = 0;
+  const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
+  for(let char of str) {
+    if(vowels.includes(char)){
+      vowelsCount++
+    }
+  }
+  return vowelsCount
 }
 console.log(vowelCounter('I love coding'));
-
-
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
   console.log('its working');
