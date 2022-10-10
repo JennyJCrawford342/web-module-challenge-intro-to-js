@@ -159,21 +159,21 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(age, weight){
-  if(age >= 1 && weight <= 5){
-  return (weight * 0.05);
-}else if(age >= 1 && weight >= 6 && weight <= 10){
-  return (weight * 0.04);
-}else if(age >=1 && weight >= 11 && weight <= 15){
-  return (weight * 0.03);
+function hungryDog(weight, age){
+  if(weight <= 5 && age >= 1){
+  return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return (weight * 0.04);
+  }else if(age >=1 && weight >= 11 && weight <= 15){
+    return (weight * 0.03);
 }else if(age >=1 && weight > 15){
   return (weight * 0.02);
 }else if(age >= 0.17 && age <= 0.33){
   return (weight * 0.10);
 }else if(age > 0.33 && age <= 0.58){
-  return (weight * 0.50);
+  return (weight * 0.05);
 }else if(age > .58 && age < 1){
-  return (weight * 0.40);
+  return (weight * 0.04);
 }
 }
 console.log('Task 3', hungryDog(1,15));
@@ -235,7 +235,7 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km * 0.62;
+  return km * 0.621371;
 }
 console.log('Task 5a', miles(5))
 
@@ -249,7 +249,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return (cm * 0.033);
+  return (cm / 30.48);
 }
 console.log('Task 5b', feet(800));
 
@@ -263,7 +263,7 @@ Using the annoyingSong function below do the following:
 1. Receive a starting number
 2. The annoying song function should return the following string exactly one time:
 
-    "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
+    "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall."
 
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
@@ -271,9 +271,9 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
   for(let i = number; i > 0; i--){
-    return `${i} bottles of soda on the wall ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall.`
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
     };
-}
+};
 console.log('Task 6', annoyingSong(8));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -331,6 +331,7 @@ function vowelCounter(str) {
   return vowelsCount
 }
 console.log(vowelCounter('I love coding'));
+
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
   console.log('its working');
